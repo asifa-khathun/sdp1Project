@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<div class="topnav">
+  <a class="a" href="homepage.html" style="margin:10px;color:blue">Home</a><a class="a" href="contact.html" style="margin:10px;color:blue">Contact</a><a class="a" href="about.html" style="margin:10px;color:blue">About</a><br>
+</div>
+<meta charset="ISO-8859-1">
+<title>SIGN UP Page</title>
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 16px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+.registerbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+a {
+  color: dodgerblue;
+}
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+</style>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<form action="register.jsp" name="form1" onsubmit="return pass_validation()">
+  <div class="container">
+<h1><center>Register</center></h1>
+<p><center>Please fill in this form to create an account.</center></p>
+    <hr>
+    <label for="userid"><b>AADHAR Number</b></label>
+    <input type="text" placeholder="Enter AADHAR Number" name="userid" id="userid" required>
+    
+    <label for="first"><b>First Name</b></label>
+    <input type="text" placeholder="Enter First Name" name="last" id="last" required>
+    
+    <label for="last"><b>Last Name</b></label>
+    <input type="text" placeholder="Enter Last Name" name="first" id="first" required>
+    
+    
+    
+    <label for="password"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" id="password" required>
+    
+    <table>
+    <tr>
+    <td><b>UserType</b></td>
+    <br>
+    <td><select name="usertype">
+	<option value="select">select</option>
+	<option value="Employee">Employee</option>
+	<option value="Customer">Customer</option>
+	</select>
+    </td>
+    </tr>
+    </table>    
+</head>
+
+</div>
+<div class="container signin">
+<center><button type="submit" class="registerbtn" name="submit" value="submit"><b>REGISTER</b></button></center>
+</div>
+<div class="container signin">
+    <p>Already have an account? <a href="home.jsp">Sign in</a>.</p>
+  </div>
+    
+</form>
+
+
+</body>
+</html>

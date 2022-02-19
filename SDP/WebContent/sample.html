@@ -1,0 +1,132 @@
+<html>
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 16px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+.registerbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+a {
+  color: dodgerblue;
+}
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+</style>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+.topnav a:hover {
+  background-color: white;
+  overflow: hidden;
+}
+
+.topnav a:hover {
+  background-color: white;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: black;
+  color: blue;
+</style>
+<div class="topnav">
+  <a class="active" href="homepage.html" style="margin:10px;">Home</a><a class="active" href="contact.html" style="margin:10px;">Contact</a><a class="active" href="about.html" style="margin:10px;">About</a><br>
+</div>
+<div class="container">
+<div class="registerbtn">
+<h1><center>Please Enter the Queries</center></h1>
+    <hr>
+   </div>
+   <body>
+      <title>Queries</title>
+      <form class = "ey" method="POST" action="http://127.0.0.1:5000/submit-form" align="center"> <!-- note action -->
+   <table align="center">
+    
+    
+    <tr>
+    <td>Please Select your choice</td>
+    <td>
+    <select name="select1"> <!-- note the name -->
+        <option value="None">Select Option</option>
+        <option value="1">How can I register?</option>
+        <option value="2">Where can I find my events?</option> 
+        <option value="3">How can I know whether my event is booked? </option> 
+        <option value="4">What are the types of events available?</option> 
+        <option value="5">At least how much time before an event can be booked?</option> 
+    </select>
+    </td>
+  </tr>
+  
+</table>
+    
+<h2><center>Input Data</center></h2>
+<hr>         <p><textarea name="query" rows="8" cols="50" autofocus>{{query}}</textarea>
+         <br>
+         <p><input type="submit" name="submit" value="SUBMIT"></p>
+         <br>
+<div class="registerbtn">
+         <p><h3>{{output}}</h3></p></div>
+         <div class="container signin">
+         
+</div>
+      </form>
+   </body>
+</html>
